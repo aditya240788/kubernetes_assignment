@@ -1,0 +1,10 @@
+Let us first understnad the two 1. DaemonSet and 2. ReplicaSet
+1. The DaemonSet and a ReplicaSet are two different types of controllers that manage the deployment and scaling of pods.
+
+DaemonSet: A DaemonSet ensures that a single copy of a Pod is running on each node in a cluster. 
+This is useful for running pods as system daemons or background processes that need to run on every node in the cluster. 
+For example, we a DaemonSet could be used to run a pod that collects system logs, monitors node performance, or manages network traffic.
+
+ReplicaSet: A ReplicaSet ensures that a specified number of pod replicas are running at any given time. 
+This is useful for running stateless applications that need to be scaled up or down as needed. 
+For example, a ReplicaSet could be useful to run a pod that serves web pages or handles database requests.
