@@ -1,1 +1,15 @@
-assignment_deployement
+#### assignment_deployement
+
+We use ‘rolling update’ with ‘minimum ready seconds’.
+1)    Apply patch to deployment by changing minReadySeconds to 10 sec (maybe some other value)
+Command: kubectl patch deployment <deployment_name> -p '{"spec": {"minReadySeconds": 10}}'
+
+ 
+
+2)    Change image
+Command: kubectl set image deployment <deployment_name> <container_name>=<new_container_image> -n <namespace>
+
+ 
+
+3)    Check status:
+Command: kubectl get all
